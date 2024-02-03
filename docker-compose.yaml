@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  node:
+    image: node:18.17
+    working_dir: /var/www
+    tty: true
+    environment:
+      - NODE_OPTIONS="--max-old-space-size=7122"
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8080:8080"
